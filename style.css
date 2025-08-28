@@ -1,3 +1,48 @@
 body {
     font-family: "Delius Swash Caps", sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+.navigation-header {
+    display: flex;
+    background: rgba(43,87,43,0.76);
+    height: 80px;
+    justify-content: space-between;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-left img {
+    height: 50px;
+    width: 50px;
+    margin-left: 20px;
+    border-radius: 50%;
+}
+
+.header-left h1 {
+    margin-left: 20px;
+    color: antiquewhite;
+}
+
+.navigation-header ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navigation-header li {
+    margin-right: 40px;
+    text-decoration: none ;
+}
+
+.background-image {
+    filter: grayscale(50%);
+    width: 100vw;
+    height: 70vh;
+    object-fit: cover;
 }
