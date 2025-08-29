@@ -40,9 +40,59 @@ body {
     text-decoration: none ;
 }
 
+.navigation-header a {
+    text-decoration: none;
+    color: antiquewhite;
+    border: solid 1px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.navigation-header a:hover {
+    color: white;
+    transition: color 0.2s ease-in-out;
+}
+
+.navigation-header a.selected {
+    background-color: darkolivegreen;
+}
+
 .background-image {
-    filter: grayscale(50%);
     width: 100vw;
     height: 70vh;
     object-fit: cover;
+    border-top: 10px solid rgb(53, 209, 144);
+    border-bottom: 10px solid rgb(209, 113, 53);
+}
+
+.description-card {
+    width: 75vw;
+    max-width: 800px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu {
+    margin-top: 7em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75vw;
+    max-width: 800px;
+    text-align: center;
+    background-color: antiquewhite;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    height: 4em;
+}
+
+td {
+    height: 3em;
 }
