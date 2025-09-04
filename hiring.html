@@ -22,5 +22,42 @@
     </ul>
 </div>
 
+<div class="application-form">
+    <form action="/action_page.php">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname">
+        <br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname"><br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address"><br>
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city"><br>
+        <label for="state">State:</label>
+        <input list="states" id="state" name="state"><br>
+        <datalist id="states">
+            <option value="TX">
+            <option value="CA">
+            <option value="OK">
+            <option value="NM">
+        </datalist>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+<!--First name — required; 1–20 characters.-->
+<!--Last name — optional; if provided, 1–20 characters.-->
+<!--Address 1 — required. Address 2 — optional.-->
+<!--City — required; less than 30 characters (max 29).-->
+<!--State — <select> with at least three two‑letter options (e.g., TX, CA, NY).-->
+<!--Age — required; must be 21–99.-->
+<!--Phone — required; must match 111-222-3333 pattern.-->
+<!--Email — required; use type="email" for basic validation.-->
+<!--Password — required; 8–12 characters and must include at least one uppercase, one lowercase, one number, and one special symbol.-->
+<!--Married — radio buttons (default to “No,” meaning applicants are assumed single).-->
+<!--Favorite colors — five checkboxes.-->
+<!--More Info — textarea with 4 rows and maxlength=30.-->
+<!--Buttons — Submit and Reset.-->
+
 </body>
 </html>
