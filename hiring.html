@@ -23,70 +23,98 @@
 </div>
 
 <div class="application-form">
-    <form action="">
-        <label for="fname" required>First name:</label>
-        <input type="text" id="fname" name="fname">
+    <form action="" method="post">
+        <div class="input-block">
+            <label>First name:
+                <input type="text" id="fname" name="fname" maxlength="20" required>
+            </label>
+        </div>
 
-        <br>
-        <label for="lname">Last name:</label>
-        <input type="text" id="lname" name="lname">
+        <div class="input-block">
+            <label>Last name:
+                <input type="text" id="lname" name="lname" maxlength="20">
+            </label>
+        </div>
 
-        <br>
-        <label for="address" aria-required="true">Address:</label>
-        <input type="text" id="address" name="address">
+        <div class="input-block">
+            <label>Address 1:
+                <input type="text" id="address1" name="address1" required>
+            </label>
+        </div>
 
-        <br>
-        <label for="city">City:</label>
-        <input type="text" id="city" name="city">
+        <div class="input-block">
+            <label>Address 2:
+                <input type="text" id="address2" name="address2">
+            </label>
+        </div>
 
-        <br>
-        <label for="state">State:</label>
-        <input list="states" id="state" name="state">
-        <datalist id="states">
-            <option value="TX">
-            <option value="CA">
-            <option value="OK">
-            <option value="NM">
-        </datalist>
+        <div class="input-block">
+            <label>City:
+                <input type="text" id="city" name="city" maxlength="29" required>
+            </label>
+            <label>State:
+                <input list="states" id="state" name="state" maxlength="2">
+                <datalist id="states">
+                    <option value="TX">
+                    <option value="CA">
+                    <option value="OK">
+                    <option value="NM">
+                </datalist>
+            </label>
+        </div>
 
-        <br>
-        <label for="age">Age:</label>
-        <input type="text" id="age" name="age">
+        <div class="input-block">
+            <label>Age:
+                <input type="number" id="age" name="age" min="21" max="99" required>
+            </label>
+        </div>
 
-        <br>
-        <label for="phone">Phone:</label>
-        <input type="phone" id="phone" name="phone">
+        <div class="input-block">
+            <label>Phone:
+                <input type="tel" id="phone" name="phone">
+            </label>
+        </div>
 
-        <br>
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email">
+        <div class="input-block">
+            <label>E-mail:
+                <input type="email" id="email" name="email">
+            </label>
+        </div>
 
-        <br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
+        <div class="input-block">
+            <label>Password:
+                <input type="password" id="password" name="password"
+                       pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\-])[A-Za-z\d!@#$%^&*()_+{}\[\]:;<>,.?~\\-]{8,12}$">
+            </label>
+        </div>
 
-        <br>
-        <label for="married">Married:</label>
-        <input type="radio" id="m-yes" name="m-yes" value="Yes">
-        <label for="m-yes">Yes</label>
-        <input type="radio" id="m-no" name="m-no" value="No">
-        <label for="m-no">No</label>
+        <div class="input-block">
+            <label>Married:
+                <label><input type="radio" id="m-yes" name="married" value="yes">Yes</label>
+                <label><input type="radio" id="m-no" name="married" value="no">No</label>
+            </label>
+        </div>
 
-        <br>
-        <label for="fav-color">Favorite color:</label>
-        <div class="colorbox" id="orange"> <input type="checkbox" id="orange" name="orange"></div>
-        <div class="colorbox" id="olive"> <input type="checkbox" id="olive" name="olive"></div>
-        <div class="colorbox" id="cyan"> <input type="checkbox" id="cyan" name="cyan"></div>
-        <div class="colorbox" id="tan"> <input type="checkbox" id="tan" name="tan"></div>
-        <div class="colorbox" id="thistle"> <input type="checkbox" id="thistle" name="thistle"></div>
-       
-        <br>
-        <label for="misctext">Additional info:</label><br>
-        <textarea id="misctext" name="misctext" rows="4" cols="30"> </textarea>
+        <div class="input-block">
+            <label>Favorite color:
+                <div class="colorbox" id="d-orange"> <input type="checkbox" id="orange" name="orange"></div>
+                <div class="colorbox" id="d-olive"> <input type="checkbox" id="olive" name="olive"></div>
+                <div class="colorbox" id="d-cyan"> <input type="checkbox" id="cyan" name="cyan"></div>
+                <div class="colorbox" id="d-tan"> <input type="checkbox" id="tan" name="tan"></div>
+                <div class="colorbox" id="d-thistle"> <input type="checkbox" id="thistle" name="thistle"></div>
+            </label>
+        </div>
 
-        <br>
-        <input type="reset" value="Reset">
-        <input type="submit" value="Submit">
+        <div class="input-block">
+            <label>Additional info:
+                <textarea id="misctext" name="misctext" rows="4" cols="30"> </textarea>
+            </label>
+        </div>
+
+        <div class="input-block">
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+        </div>
 
     </form>
 </div>
