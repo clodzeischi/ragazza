@@ -1,2 +1,2 @@
 # ragazza
-Intro to JS competency3 project
+Intro to front end Capstone.
