@@ -43,100 +43,115 @@
     </div>
 </nav>
 
-<div class="application-form">
+<div class="dark-container">
+    <h2>Now hiring!</h2>    
     <form action="" method="post">
-        <div class="input-block">
-            <label>First name:
-                <input type="text" id="fname" name="fname" maxlength="20" required>
-            </label>
+        <div class="container">
+            <div class="row mb-2">
+                <div class="form-floating col-md-6">
+                <input type="text" class="form-control" id="floatingFN" required>
+                <label for="floatingFN">First Name</label>
+                </div>
+                <div class="form-floating col-md-6">
+                <input type="text" class="form-control" id="floatingLN" required>
+                <label for="floatingLN">Last Name</label>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="form-floating col-md-6">
+                <input type="text" class="form-control" id="floatingA1" required>
+                <label for="floatingA1">Address p1.</label>
+                </div>
+                <div class="form-floating col-md-6">
+                <input type="text" class="form-control" id="floatingA2">
+                <label for="floatingA2">Address p2. (opt)</label>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="form-floating col-md-6">
+                <input type="text" class="form-control" id="floatingCity" required>
+                <label for="floatingCity">City</label>
+                </div>
+                <div class="col-md-3">
+                <select class="form-select" aria-label="State" required>
+                <option selected value="TX">TX</option>
+                <option value="OK">OK</option>
+                <option value="NM">NM</option>
+                </select>
+                </div>
+                <div class="form-floating col-md-3">
+                <input type="text" class="form-control" id="floatingZip" required>
+                <label for="floatingZip">Zip</label>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="form-floating col-md-4">
+                <input type="number" class="form-control" id="floatingAge">
+                <label for="floatingAge">Age</label>
+                </div>
+                <div class="form-floating col-md-8">
+                <input type="text" class="form-control" id="floatingPhone">
+                <label for="floatingPhone">Phone</label>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="form-floating col-md-6">
+                <input type="email" class="form-control" id="floatingEmail">
+                <label for="floatingEmail">Email</label>
+                </div>
+                <div class="form-floating col-md-6">
+                <input type="password" class="form-control" id="floatingPW">
+                <label for="floatingPW">Password</label>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="form-floating col-md-6">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="married" id="marriedY">
+                        <label class="form-check-label" for="marriedY">
+                            Married
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="married" id="marriedN" checked>
+                        <label class="form-check-label" for="marriedN">
+                            Not married
+                        </label>
+                    </div>
+                </div>
+            </div>
+                <div class="row">Favorite color:</div>
+                <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="chbox1" value="red">
+                <label class="form-check-label" for="chbox1">Red</label>
+                </div>
+                <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="chbox2" value="green">
+                <label class="form-check-label" for="chbox2">Green</label>
+                </div>
+                <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="chbox3" value="blue">
+                <label class="form-check-label" for="chbox3">Blue</label>
+                </div>
+                <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="chbox4" value="purple">
+                <label class="form-check-label" for="chbox4">Purple</label>
+                </div>
+                <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="chbox5" value="orange">
+                <label class="form-check-label" for="chbox5">Orange</label>
+                </div>
+            <div class="row mb-2">
+                <label for="moreInfo" class="form-label">Additional information:</label>
+                <textarea class="form-control" id="moreInfo" rows="3"></textarea>
+            </div>
+            <div class="row mb-2">
+                <div class="col-md2">
+                    <button id="button-reset" type="reset" class="menu-arrow-button">Reset</button>
+                    <button id="button-submit" type="submit" class="menu-arrow-button">Submit</button>
+                </div>
+            </div>
         </div>
-
-        <div class="input-block">
-            <label>Last name:
-                <input type="text" id="lname" name="lname" maxlength="20">
-            </label>
-        </div>
-
-        <div class="input-block">
-            <label>Address 1:
-                <input type="text" id="address1" name="address1" required>
-            </label>
-        </div>
-
-        <div class="input-block">
-            <label>Address 2:
-                <input type="text" id="address2" name="address2">
-            </label>
-        </div>
-
-        <div class="input-block">
-            <label>City:
-                <input type="text" id="city" name="city" maxlength="29" required>
-            </label>
-            <label>State:
-                <input list="states" id="state" name="state" maxlength="2">
-                <datalist id="states">
-                    <option value="TX">
-                    <option value="CA">
-                    <option value="OK">
-                    <option value="NM">
-                </datalist>
-            </label>
-        </div>
-
-        <div class="input-block">
-            <label>Age:
-                <input type="number" id="age" name="age" min="21" max="99" required>
-            </label>
-        </div>
-
-        <div class="input-block">
-            <label>Phone:
-                <input type="tel" id="phone" name="phone">
-            </label>
-        </div>
-
-        <div class="input-block">
-            <label>E-mail:
-                <input type="email" id="email" name="email">
-            </label>
-        </div>
-
-        <div class="input-block">
-            <label>Password:
-                <input type="password" id="password" name="password"
-                       pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\-])[A-Za-z\d!@#$%^&*()_+{}\[\]:;<>,.?~\\-]{8,12}$">
-            </label>
-        </div>
-
-        <div class="input-block">
-            <label>Married:
-                <label><input type="radio" id="m-yes" name="married" value="yes">Yes</label>
-                <label><input type="radio" id="m-no" name="married" value="no">No</label>
-            </label>
-        </div>
-
-        <div class="input-block">
-            <label>Favorite color:
-                <div class="colorbox" id="d-orange"> <input type="checkbox" id="orange" name="orange"></div>
-                <div class="colorbox" id="d-olive"> <input type="checkbox" id="olive" name="olive"></div>
-                <div class="colorbox" id="d-cyan"> <input type="checkbox" id="cyan" name="cyan"></div>
-                <div class="colorbox" id="d-tan"> <input type="checkbox" id="tan" name="tan"></div>
-                <div class="colorbox" id="d-thistle"> <input type="checkbox" id="thistle" name="thistle"></div>
-            </label>
-        </div>
-
-        <div class="input-block">
-            <label>Additional info:
-                <textarea id="misctext" name="misctext" rows="4" cols="30"> </textarea>
-            </label>
-        </div>
-
-        <div class="input-block">
-            <input type="reset" value="Reset">
-            <input type="submit" value="Submit">
-        </div>
-
     </form>
 </div>
 
@@ -148,5 +163,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+<script src="hiring_logic.js"></script>
 </body>
 </html>

@@ -1,0 +1,25 @@
+
+
+
+        <div class="input-block">
+            <label>Favorite color:
+                <div class="colorbox" id="d-orange"> <input type="checkbox" id="orange" name="orange"></div>
+                <div class="colorbox" id="d-olive"> <input type="checkbox" id="olive" name="olive"></div>
+                <div class="colorbox" id="d-cyan"> <input type="checkbox" id="cyan" name="cyan"></div>
+                <div class="colorbox" id="d-tan"> <input type="checkbox" id="tan" name="tan"></div>
+                <div class="colorbox" id="d-thistle"> <input type="checkbox" id="thistle" name="thistle"></div>
+            </label>
+        </div>
+
+        <div class="input-block">
+            <label>Additional info:
+                <textarea id="misctext" name="misctext" rows="4" cols="30"> </textarea>
+            </label>
+        </div>
+
+        <div class="input-block">
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+        </div>
+
+    </form>
