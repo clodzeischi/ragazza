@@ -1,5 +1,14 @@
+const fnInput = document.getElementById('input-fn');
+const lnInput = document.getElementById('input-ln');
+const a1Input = document.getElementById('input-a1');
+const a2Input = document.getElementById('input-a2');
+const cityInput = document.getElementById('input-city');
+const stateInput = document.querySelector('select');
+const zipInput = document.getElementById('input-zip');
 const ageInput = document.getElementById('input-age');
 const phoneInput = document.getElementById('input-phone');
+const emailInput = document.getElementById('input-email');
+const pwInput = document.getElementById('input-pw');
 const infoInput = document.getElementById('input-info');
 const infoLabel = document.getElementById('input-info-label');
 const submitButton = document.getElementById('button-submit');
@@ -21,8 +30,7 @@ submitButton.addEventListener('click', (e) => {
 
     // Validate phone
     const phoneSanitized = phoneInput.value.replace(/\D/g, '');
-    const phoneDigitized = parseInt(phoneSanitized);
-    if (isNaN(phoneDigitized) || phoneDigitized.length < 7 || phoneDigitized.length > 11) {
+    if (isNaN(phoneSanitized) || phoneSanitized.length < 7 || phoneSanitized.length > 11) {
         phoneInput.setCustomValidity('Invalid phone number');
         valid = false;
     } else {
@@ -34,6 +42,27 @@ submitButton.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
         document.querySelector('form').reportValidity();
+    } else {
+        e.preventDefault();
+        const form = document.querySelector('form');
+
+        const formData = {
+            firstName: fnInput.value,
+            lastName: lnInput.value,
+            address1: a1Input.value,
+            address2: a2Input.value,
+            city: cityInput.value,
+            state: stateInput.value,
+            zip: zipInput.value,
+            phone: phoneInput.value,
+            email: emailInput.value,
+            password: pwInput.value,
+            additional: infoInput.value,
+            married: form.querySelector("input[name='married']:checked")?.id === 'input-mar-y',
+            colors: Array.from(form.querySelectorAll("input[type='checkbox']:checked")).map(cb => cb.value)
+        }
+
+        console.log(formData);
     }
 });
 
